@@ -1,0 +1,1069 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://tartan.plaid.com/exchange_token
+    body:
+      encoding: US-ASCII
+      string: public_token=357f78289954f350a36b0a0283f40c713e4134ea9c27182046f521b4a64ddfb7327d6f846af8acfa10ab06bbc8a26cb9c9e2d758f90f3bde1a213520bda62c28&client_id=55deef65f1b303e8243a3f9e&secret=d8f96bcb3229e9efb9a969f6bbabc2
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 27 Aug 2015 21:26:18 GMT
+      Vary:
+      - X-HTTP-Method-Override, Accept-Encoding
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "access_token": "test_bofa"
+        }
+    http_version: 
+  recorded_at: Thu, 27 Aug 2015 21:26:14 GMT
+- request:
+    method: post
+    uri: https://tartan.plaid.com/exchange_token
+    body:
+      encoding: US-ASCII
+      string: public_token=d3fd7d10960b40e56dd4b3a9b108cd7d42a0bf289eaac4e7d625e8d3a06b484d85d156b60e07519b9274649d23824d6b0c10e173e114267891223fea55fb431b&client_id=55deef65f1b303e8243a3f9e&secret=d8f96bcb3229e9efb9a969f6bbabc2
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 27 Aug 2015 21:26:18 GMT
+      Vary:
+      - X-HTTP-Method-Override, Accept-Encoding
+      Content-Length:
+      - '33'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "access_token": "test_bofa"
+        }
+    http_version: 
+  recorded_at: Thu, 27 Aug 2015 21:26:14 GMT
+- request:
+    method: post
+    uri: https://tartan.plaid.com/connect/get
+    body:
+      encoding: US-ASCII
+      string: access_token=test_bofa&options=%7B%7D&client_id=55deef65f1b303e8243a3f9e&secret=d8f96bcb3229e9efb9a969f6bbabc2
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 27 Aug 2015 21:26:27 GMT
+      Vary:
+      - X-HTTP-Method-Override, Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "accounts": [
+            {
+              "_id": "QPO8Jo8vdDHMepg41PBwckXm4KdK1yUdmXOwK",
+              "_item": "KdDjmojBERUKx3JkDd9RuxA5EvejA4SENO4AA",
+              "_user": "eJXpMzpR65FP4RYno6rzuA7OZjd9n3Hna0RYa",
+              "balance": {
+                "available": 1203.42,
+                "current": 1274.93
+              },
+              "institution_type": "fake_institution",
+              "meta": {
+                "name": "Personal account",
+                "number": "9606"
+              },
+              "subtype": "savings",
+              "type": "depository"
+            },
+            {
+              "_id": "0AZ0De04KqsreDgVwM1RSRYjyd8yXxSDQ8Zxn",
+              "_item": "KdDjmojBERUKx3JkDd9RuxA5EvejA4SENO4AA",
+              "_user": "eJXpMzpR65FP4RYno6rzuA7OZjd9n3Hna0RYa",
+              "balance": {
+                "available": 700.03,
+                "current": 720.55
+              },
+              "institution_type": "fake_institution",
+              "meta": {
+                "name": "Other account",
+                "number": "9606"
+              },
+              "subtype": "savings",
+              "type": "depository"
+            }
+          ],
+          "transactions": [
+            {
+              "_account": "QPO8Jo8vdDHMepg41PBwckXm4KdK1yUdmXOwK",
+              "_id": "0AZ0De04KqsreDgVwM1RSRYjyd8yXxSDQ8Zxn",
+              "amount": 200,
+              "date": "2014-07-21",
+              "name": "POS DNSIMPLE.COM 3125490222 3,00 USD",
+              "meta": {
+                "location": {
+                  "city": "San Francisco",
+                  "state": "CA"
+                }
+              },
+              "pending": false,
+              "type": {
+                "primary": "special"
+              },
+              "category": [
+                "Transfer",
+                "Withdrawal",
+                "ATM"
+              ],
+              "category_id": "21012002",
+              "score": {
+                "location": {
+                  "city": 1,
+                  "state": 1
+                },
+                "name": 1
+              }
+            },
+            {
+              "_account": "QPO8Jo8vdDHMepg41PBwckXm4KdK1yUdmXOwK",
+              "_id": "3mg4qV4JZycjewvKEzrLTYMzdr1MmvcO4Z3zX",
+              "amount": 240,
+              "date": "2014-07-24",
+              "name": "POS GITHUB.COM 11VI7 4154486673 25,00 USD",
+              "meta": {
+                "location": {}
+              },
+              "pending": false,
+              "type": {
+                "primary": "special"
+              },
+              "category": [
+                "Transfer",
+                "Account Transfer"
+              ],
+              "category_id": "21001000",
+              "score": {
+                "location": {},
+                "name": 1
+              }
+            },
+            {
+              "_account": "0AZ0De04KqsreDgVwM1RSRYjyd8yXxSDQ8Zxn",
+              "_id": "3mg4qV4JZycjewvKEzrLTYMzdr1MmvcO4Z3zX",
+              "amount": 10,
+              "date": "2014-08-24",
+              "name": "BOUNTYSOURCE.COM NEOVIM SALT",
+              "meta": {
+                "location": {}
+              },
+              "pending": false,
+              "type": {
+                "primary": "special"
+              },
+              "category": [
+                "Transfer",
+                "Account Transfer"
+              ],
+              "category_id": "21001000",
+              "score": {
+                "location": {},
+                "name": 1
+              }
+            },
+            {
+              "_account": "0AZ0De04KqsreDgVwM1RSRYjyd8yXxSDQ8Zxn",
+              "_id": "3mg4qV4JZycjewvKEzrLTYMzdr1MmvcO4Z3zX",
+              "amount": 10,
+              "date": "2014-09-24",
+              "name": "BOUNTYSOURCE.COM NEOVIM SALT",
+              "meta": {
+                "location": {}
+              },
+              "pending": false,
+              "type": {
+                "primary": "special"
+              },
+              "category": [
+                "Transfer",
+                "Account Transfer"
+              ],
+              "category_id": "21001000",
+              "score": {
+                "location": {},
+                "name": 1
+              }
+            },
+            {
+              "_account": "0AZ0De04KqsreDgVwM1RSRYjyd8yXxSDQ8Zxn",
+              "_id": "3mg4qV4JZycjewvKEzrLTYMzdr1MmvcO4Z3zX",
+              "amount": 10,
+              "date": "2014-10-24",
+              "name": "BOUNTYSOURCE.COM NEOVIM SALT",
+              "meta": {
+                "location": {}
+              },
+              "pending": false,
+              "type": {
+                "primary": "special"
+              },
+              "category": [
+                "Transfer",
+                "Account Transfer"
+              ],
+              "category_id": "21001000",
+              "score": {
+                "location": {},
+                "name": 1
+              }
+            }
+          ],
+          "access_token": "test_bofa"
+        }
+    http_version: 
+  recorded_at: Thu, 27 Aug 2015 21:26:15 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/GITHUB.COM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 14:15:24 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '599'
+      X-Ratelimit-Reset:
+      - '1440771384'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "db6ffb23-a89a-4a94-a3b8-59fbc17d8ae1",
+          "name": "GitHub",
+          "legalName": "GitHub, Inc.",
+          "domain": "github.com",
+          "domainAliases": [
+            "github.net",
+            "guthub.com"
+          ],
+          "url": "http://github.com",
+          "site": {
+            "url": "http://github.com",
+            "title": "GitHub · Build software better, together.",
+            "h1": "Build software better, together.",
+            "metaDescription": "GitHub is where people build software. More than 10 million people use GitHub to discover, fork, and contribute to over 26 million projects.",
+            "metaAuthor": null
+          },
+          "category": {
+            "sector": "Information Technology",
+            "industryGroup": "Software & Services",
+            "industry": "Software",
+            "subIndustry": "Application Software"
+          },
+          "tags": [
+            "Software"
+          ],
+          "description": "GitHub is the best place to share code with friends, co-workers, classmates, and complete strangers. Over two million people use GitHub to build amazing things together.\n\nWith the collaborative features of GitHub.com, our desktop and mobile apps, and GitHub Enterprise, it has never been easier for individuals and teams to write better code, faster.",
+          "location": "88 Colin P Kelly Junior Street, San Francisco, CA 94107, USA",
+          "geo": {
+            "streetNumber": "88",
+            "streetName": "Colin P Kelly Junior Street",
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": "94107",
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.78226710000001,
+            "lng": -122.3912479
+          },
+          "logo": "https://logo.clearbit.com/github.com",
+          "facebook": {
+            "handle": "github",
+            "likes": null
+          },
+          "linkedin": {
+            "handle": "company/1418841"
+          },
+          "twitter": {
+            "handle": "github",
+            "id": "13334762",
+            "bio": "How people build software",
+            "followers": 663793,
+            "following": 173,
+            "location": "San Francisco, CA",
+            "site": "https://t.co/FoKGHcCyJJ",
+            "avatar": "https://pbs.twimg.com/profile_images/616309728688238592/pBeeJQDQ_normal.png"
+          },
+          "angellist": {
+            "id": 60436,
+            "handle": "github",
+            "description": "GitHub is the best place to share code with friends, co-workers, classmates, and complete strangers. Over two million people use GitHub to build amazing things together.\n\nWith the collaborative features of GitHub.com, our desktop and mobile apps, and GitHub Enterprise, it has never been easier for individuals and teams to write better code, faster.",
+            "followers": 363,
+            "blogUrl": "http://github.com/blog"
+          },
+          "crunchbase": {
+            "handle": "github"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "phone": "+1 415-448-6673",
+          "metrics": {
+            "alexaUsRank": 101,
+            "alexaGlobalRank": 92,
+            "googleRank": 8,
+            "employees": 300,
+            "marketCap": null,
+            "raised": 100000000
+          },
+          "tech": [
+            "google_apps",
+            "zendesk"
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 28 Aug 2015 14:15:25 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/DNSIMPLE.COM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 14:15:24 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '598'
+      X-Ratelimit-Reset:
+      - '1440771384'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "31b9700f-c03c-4094-8d34-968413bde7cb",
+          "name": "DNSimple",
+          "legalName": null,
+          "domain": "dnsimple.com",
+          "domainAliases": [
+
+          ],
+          "url": "http://dnsimple.com",
+          "site": {
+            "url": "http://dnsimple.com",
+            "title": "Domain name service and DNS services - Easy DNS hosting with DNSimple - DNSimple",
+            "h1": "Worry-free DNS.",
+            "metaDescription": "Domain Name Service with low cost hosted DNS, an easy to use web interface, and a REST API for automation. Hosting DNS has never been so simple.",
+            "metaAuthor": null
+          },
+          "category": {
+            "sector": null,
+            "industryGroup": null,
+            "industry": null,
+            "subIndustry": null
+          },
+          "tags": [
+            "Internet",
+            "DNSimple",
+            "RoboWhois",
+            "RoboDomain"
+          ],
+          "description": "DNSimple provides hosted DNS and domain management via a web interface, REST API and iPhone application.",
+          "location": "618 East South Street #500, Orlando, FL 32801, USA",
+          "geo": {
+            "streetNumber": "618",
+            "streetName": "East South Street",
+            "subPremise": "500",
+            "city": "Orlando",
+            "postalCode": "32801",
+            "state": "Florida",
+            "stateCode": "FL",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 28.5379848,
+            "lng": -81.36876529999999
+          },
+          "logo": "https://logo.clearbit.com/dnsimple.com",
+          "facebook": {
+            "handle": "dnsimple",
+            "likes": null
+          },
+          "linkedin": {
+            "handle": "company/dnsimple"
+          },
+          "twitter": {
+            "handle": "dnsimple",
+            "id": "148198686",
+            "bio": "We make DNS simple.",
+            "followers": 4459,
+            "following": 1155,
+            "location": "Planet Earth",
+            "site": "https://t.co/MkSPw49ix0",
+            "avatar": "https://pbs.twimg.com/profile_images/3728773060/ec47b30e14d78394929bcb88895ab091_normal.jpeg"
+          },
+          "angellist": {
+            "id": null,
+            "handle": null,
+            "description": null,
+            "followers": null,
+            "blogUrl": null
+          },
+          "crunchbase": {
+            "handle": "dnsimple"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "phone": "+1 321-549-0222",
+          "metrics": {
+            "alexaUsRank": 29250,
+            "alexaGlobalRank": 51267,
+            "googleRank": 6,
+            "employees": 10,
+            "marketCap": null,
+            "raised": null
+          },
+          "tech": [
+            "google_analytics",
+            "newrelic",
+            "drip",
+            "sendgrid",
+            "nginx",
+            "google_apps"
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 28 Aug 2015 14:15:25 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/bar.bar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 16:06:14 GMT
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '598'
+      X-Ratelimit-Reset:
+      - '1440778034'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 28 Aug 2015 16:06:14 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/foo.foo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 28 Aug 2015 16:06:14 GMT
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '599'
+      X-Ratelimit-Reset:
+      - '1440778034'
+      Content-Length:
+      - '94'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 28 Aug 2015 16:06:14 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/BOUNTYSOURCE.COM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Aug 2015 15:14:03 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '599'
+      X-Ratelimit-Reset:
+      - '1441034103'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
+          "name": "Bountysource",
+          "legalName": null,
+          "domain": "bountysource.com",
+          "domainAliases": [
+
+          ],
+          "url": "http://bountysource.com",
+          "site": {
+            "url": "http://bountysource.com",
+            "title": "Bountysource",
+            "h1": null,
+            "metaDescription": null,
+            "metaAuthor": null
+          },
+          "category": {
+            "sector": "Information Technology",
+            "industryGroup": "Software & Services",
+            "industry": "Software",
+            "subIndustry": null
+          },
+          "tags": [
+
+          ],
+          "description": "Bountysource offers an online funding platform for open-source software.",
+          "location": "San Francisco, CA, USA",
+          "geo": {
+            "streetNumber": null,
+            "streetName": null,
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": null,
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.7749295,
+            "lng": -122.4194155
+          },
+          "logo": "https://logo.clearbit.com/bountysource.com",
+          "facebook": {
+            "handle": "bountysource",
+            "likes": 355
+          },
+          "linkedin": {
+            "handle": "company/bountysource"
+          },
+          "twitter": {
+            "handle": "Bountysource",
+            "id": "774713040",
+            "bio": "The funding platform for open-source software.\n\n#Bountysource on Freenode.",
+            "followers": 2287,
+            "following": 1656,
+            "location": "San Francisco, CA",
+            "site": "https://t.co/cCrkoMiWDX",
+            "avatar": "https://pbs.twimg.com/profile_images/378800000188347152/b3e8c86ff3a8e3f3c7d735cd79454601_normal.png"
+          },
+          "angellist": {
+            "id": 231353,
+            "handle": "bountysource",
+            "description": null,
+            "followers": 26,
+            "blogUrl": "http://blog.bountysource.com/"
+          },
+          "crunchbase": {
+            "handle": "bountysource"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "phone": null,
+          "metrics": {
+            "alexaUsRank": 118151,
+            "alexaGlobalRank": 141461,
+            "googleRank": 5,
+            "employees": 10,
+            "marketCap": null,
+            "raised": 1000000
+          },
+          "tech": [
+            "sendgrid",
+            "google_apps",
+            "aws_route_53",
+            "heroku"
+          ]
+        }
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 15:14:03 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/BOUNTYSOURCE.COM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Aug 2015 15:14:03 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '598'
+      X-Ratelimit-Reset:
+      - '1441034103'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
+          "name": "Bountysource",
+          "legalName": null,
+          "domain": "bountysource.com",
+          "domainAliases": [
+
+          ],
+          "url": "http://bountysource.com",
+          "site": {
+            "url": "http://bountysource.com",
+            "title": "Bountysource",
+            "h1": null,
+            "metaDescription": null,
+            "metaAuthor": null
+          },
+          "category": {
+            "sector": "Information Technology",
+            "industryGroup": "Software & Services",
+            "industry": "Software",
+            "subIndustry": null
+          },
+          "tags": [
+
+          ],
+          "description": "Bountysource offers an online funding platform for open-source software.",
+          "location": "San Francisco, CA, USA",
+          "geo": {
+            "streetNumber": null,
+            "streetName": null,
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": null,
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.7749295,
+            "lng": -122.4194155
+          },
+          "logo": "https://logo.clearbit.com/bountysource.com",
+          "facebook": {
+            "handle": "bountysource",
+            "likes": 355
+          },
+          "linkedin": {
+            "handle": "company/bountysource"
+          },
+          "twitter": {
+            "handle": "Bountysource",
+            "id": "774713040",
+            "bio": "The funding platform for open-source software.\n\n#Bountysource on Freenode.",
+            "followers": 2287,
+            "following": 1656,
+            "location": "San Francisco, CA",
+            "site": "https://t.co/cCrkoMiWDX",
+            "avatar": "https://pbs.twimg.com/profile_images/378800000188347152/b3e8c86ff3a8e3f3c7d735cd79454601_normal.png"
+          },
+          "angellist": {
+            "id": 231353,
+            "handle": "bountysource",
+            "description": null,
+            "followers": 26,
+            "blogUrl": "http://blog.bountysource.com/"
+          },
+          "crunchbase": {
+            "handle": "bountysource"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "phone": null,
+          "metrics": {
+            "alexaUsRank": 118151,
+            "alexaGlobalRank": 141461,
+            "googleRank": 5,
+            "employees": 10,
+            "marketCap": null,
+            "raised": 1000000
+          },
+          "tech": [
+            "sendgrid",
+            "google_apps",
+            "aws_route_53",
+            "heroku"
+          ]
+        }
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 15:14:03 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/BOUNTYSOURCE.COM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Aug 2015 15:14:03 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '597'
+      X-Ratelimit-Reset:
+      - '1441034103'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
+          "name": "Bountysource",
+          "legalName": null,
+          "domain": "bountysource.com",
+          "domainAliases": [
+
+          ],
+          "url": "http://bountysource.com",
+          "site": {
+            "url": "http://bountysource.com",
+            "title": "Bountysource",
+            "h1": null,
+            "metaDescription": null,
+            "metaAuthor": null
+          },
+          "category": {
+            "sector": "Information Technology",
+            "industryGroup": "Software & Services",
+            "industry": "Software",
+            "subIndustry": null
+          },
+          "tags": [
+
+          ],
+          "description": "Bountysource offers an online funding platform for open-source software.",
+          "location": "San Francisco, CA, USA",
+          "geo": {
+            "streetNumber": null,
+            "streetName": null,
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": null,
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.7749295,
+            "lng": -122.4194155
+          },
+          "logo": "https://logo.clearbit.com/bountysource.com",
+          "facebook": {
+            "handle": "bountysource",
+            "likes": 355
+          },
+          "linkedin": {
+            "handle": "company/bountysource"
+          },
+          "twitter": {
+            "handle": "Bountysource",
+            "id": "774713040",
+            "bio": "The funding platform for open-source software.\n\n#Bountysource on Freenode.",
+            "followers": 2287,
+            "following": 1656,
+            "location": "San Francisco, CA",
+            "site": "https://t.co/cCrkoMiWDX",
+            "avatar": "https://pbs.twimg.com/profile_images/378800000188347152/b3e8c86ff3a8e3f3c7d735cd79454601_normal.png"
+          },
+          "angellist": {
+            "id": 231353,
+            "handle": "bountysource",
+            "description": null,
+            "followers": 26,
+            "blogUrl": "http://blog.bountysource.com/"
+          },
+          "crunchbase": {
+            "handle": "bountysource"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "phone": null,
+          "metrics": {
+            "alexaUsRank": 118151,
+            "alexaGlobalRank": 141461,
+            "googleRank": 5,
+            "employees": 10,
+            "marketCap": null,
+            "raised": 1000000
+          },
+          "tech": [
+            "sendgrid",
+            "google_apps",
+            "aws_route_53",
+            "heroku"
+          ]
+        }
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 15:14:03 GMT
+recorded_with: VCR 2.9.3

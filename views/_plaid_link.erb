@@ -1,0 +1,10 @@
+<form id="plaid-form" method="GET" action="?" class="text-center"></form>
+
+<script
+  src="https://cdn.plaid.com/link/stable/link-initialize.js"
+  data-client-name="Application"
+  data-form-id="plaid-form"
+  data-key="<%= PlaidGateway.public_key %>"
+  data-product="auth"
+  data-env="<%= PlaidGateway.environment %>">
+</script>
