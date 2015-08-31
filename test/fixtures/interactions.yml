@@ -703,7 +703,7 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         {
           "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
@@ -839,7 +839,7 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         {
           "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
@@ -975,7 +975,7 @@ http_interactions:
       Connection:
       - keep-alive
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         {
           "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
@@ -1066,4 +1066,140 @@ http_interactions:
         }
     http_version: 
   recorded_at: Mon, 31 Aug 2015 15:14:03 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/companies/domain/BOUNTYSOURCE.COM
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 335805102c5a94c162eaec5b76752752
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 31 Aug 2015 16:11:34 GMT
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Account-Id:
+      - e70e4596-da44-4160-86e2-1a75562dcbb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '600'
+      X-Ratelimit-Remaining:
+      - '599'
+      X-Ratelimit-Reset:
+      - '1441037554'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "fe0e30c9-283e-4f61-a283-cbaa7ab4cdf1",
+          "name": "Bountysource",
+          "legalName": null,
+          "domain": "bountysource.com",
+          "domainAliases": [
+
+          ],
+          "url": "http://bountysource.com",
+          "site": {
+            "url": "http://bountysource.com",
+            "title": "Bountysource",
+            "h1": null,
+            "metaDescription": null,
+            "metaAuthor": null
+          },
+          "category": {
+            "sector": "Information Technology",
+            "industryGroup": "Software & Services",
+            "industry": "Software",
+            "subIndustry": null
+          },
+          "tags": [
+
+          ],
+          "description": "Bountysource offers an online funding platform for open-source software.",
+          "location": "San Francisco, CA, USA",
+          "geo": {
+            "streetNumber": null,
+            "streetName": null,
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": null,
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.7749295,
+            "lng": -122.4194155
+          },
+          "logo": "https://logo.clearbit.com/bountysource.com",
+          "facebook": {
+            "handle": "bountysource",
+            "likes": 355
+          },
+          "linkedin": {
+            "handle": "company/bountysource"
+          },
+          "twitter": {
+            "handle": "Bountysource",
+            "id": "774713040",
+            "bio": "The funding platform for open-source software.\n\n#Bountysource on Freenode.",
+            "followers": 2287,
+            "following": 1656,
+            "location": "San Francisco, CA",
+            "site": "https://t.co/cCrkoMiWDX",
+            "avatar": "https://pbs.twimg.com/profile_images/378800000188347152/b3e8c86ff3a8e3f3c7d735cd79454601_normal.png"
+          },
+          "angellist": {
+            "id": 231353,
+            "handle": "bountysource",
+            "description": null,
+            "followers": 26,
+            "blogUrl": "http://blog.bountysource.com/"
+          },
+          "crunchbase": {
+            "handle": "bountysource"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "phone": null,
+          "metrics": {
+            "alexaUsRank": 118151,
+            "alexaGlobalRank": 141461,
+            "googleRank": 5,
+            "employees": 10,
+            "marketCap": null,
+            "raised": 1000000
+          },
+          "tech": [
+            "sendgrid",
+            "google_apps",
+            "aws_route_53",
+            "heroku"
+          ]
+        }
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 16:11:34 GMT
 recorded_with: VCR 2.9.3
